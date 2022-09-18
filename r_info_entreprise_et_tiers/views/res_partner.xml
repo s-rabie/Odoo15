@@ -6,14 +6,19 @@
         <field name="model">res.partner</field>
         <field name="inherit_id" ref="base.view_partner_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='vat']" position="replace">
+            <xpath expr="//field[@name='vat']" position="before">
                 <field name="n_rc"/>
                 <field name="nif"/>
                 <field name="nis"/>
                 <field name="ai"/>
             </xpath>
 
-            <xpath expr="//field[@name='mobile']" position="after">
+            <xpath expr="//field[@name='vat']" position="attributes">
+                    <attribute name="string">Autres</attribute>
+                    <attribute name="invisible">True</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='phone']" position="after">
                 <field name="fax_number"/>
             </xpath>
         </field>

@@ -10,4 +10,4 @@ class ResPartner(models.Model):
     n_rc = fields.Char(string="Numéro RC")
     nif = fields.Char(string="NIF")
     nis = fields.Char(string="NIS")
-    ai = fields.Char(string="Article d''imposition")
+    ai = fields.Char(string="Article d'imposition")
