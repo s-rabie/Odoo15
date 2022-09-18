@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+{
+    'name': 'Afficher le montant en lettre au niveau des les devis, les factures et les bons de commande achat ',
+    'version': '15.0.0.0',
+    'author': 'Rabie Sakhri',
+    'summary': 'Afficher le montant en lettre dans les devis, les factures et les bons de commande achat, à la fois dans les formulaires et les rapports',
+    'description': """Ce module affiche le montant total en lettre dans les devis, les factures et les bons de commande, à la fois dans les formulaires et les rapports.""",
+    'category': 'Sales',
+    'website': '',
+    'license': 'AGPL-3',
+    'price': 2.0,
+    'currency': 'USD',
+    'depends': ['sale_management','purchase'],
+    'data': [
+        'views/sale_order_view.xml',
+        'views/purchase_order_view.xml',
+        'views/invoice_view.xml',
+        'report/sale_order_report.xml',
+        'report/purchase_order_report.xml',
+        'report/invoice_report.xml',
+    ],
+    'qweb': [],
+    'images': ['static/description/odoo_r_banner.png'],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

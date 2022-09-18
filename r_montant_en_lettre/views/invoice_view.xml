@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record id="view_invoice_form_amount_to_words" model="ir.ui.view">
+            <field name="name">Montant en lettre Invoice form</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_move_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='narration']" position="replace">
+                    <group>
+                        <div style="padding-top:10px;padding-bottom:10px;">
+                            <label for="amount_words"/><field name="amount_words"/>
+                            <field name="narration" placeholder="Terms and Conditions" class="oe_inline" nolabel="1"/>
+                        </div>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+</odoo>

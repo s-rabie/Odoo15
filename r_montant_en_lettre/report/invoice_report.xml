@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <template id="invoice_report_amount_in_words_inherit" inherit_id="account.report_invoice_document">
+            <xpath expr="//div[@class='clearfix']" position="after">
+                 <div style="padding-top:20px; padding-bottom:20px;">
+                    <p><span><strong>Arrêter la présente facture à la somme de : </strong></span><span t-field="o.amount_words"/></p>
+                </div>
+            </xpath>
+        </template>
+</odoo>

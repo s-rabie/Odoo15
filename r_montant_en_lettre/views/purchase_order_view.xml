@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="purchase_order_form_amount_to_words" model="ir.ui.view">
+    <field name="name">Montant en lettre Purchase Order</field>
+    <field name="model">purchase.order</field>
+    <field name="inherit_id" ref="purchase.purchase_order_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//field[@name='notes']" position="before">
+           <group colspan="2">
+                <div style="padding-top:10px;padding-bottom:10px;">
+                    <label for="amount_words"/><field name="amount_words"/>
+                </div>
+            </group>
+        </xpath>
+    </field>
+    </record>
+</odoo>
