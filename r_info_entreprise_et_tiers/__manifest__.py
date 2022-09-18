@@ -10,7 +10,7 @@
     'website': "",
     'license': 'AGPL-3',
 
-    'price': 0.0,
+    'price': 1.0,
     'currency': 'USD',
 
     'depends': ['base'],
@@ -23,7 +23,7 @@
     'demo': [
 
     ],
-    'images': [],
+    'images': ['static/description/banner.png'],
     'qweb': [],
 
     'installable': True,
