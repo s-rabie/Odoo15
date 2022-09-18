@@ -23,7 +23,7 @@
     'demo': [
 
     ],
-    'images': ['static/description/banner.png'],
+    'images': ['static/description/odoo_r_banner.png'],
     'qweb': [],
 
     'installable': True,
