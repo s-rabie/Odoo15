@@ -10,7 +10,7 @@
     'website': "",
     'license': 'AGPL-3',
 
-    'price': 1.0,
+    'price': 0.0,
     'currency': 'USD',
 
     'depends': ['base'],
