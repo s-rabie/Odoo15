@@ -3,7 +3,7 @@
 {
     'name': """Algérie - 58 Wilayas""",
     'version': '1.0.0.1',
-    'summary':"""Les 58 wilayas et leurs communes""",
+    'summary': """Les 58 wilayas et leurs communes""",
     'description': """Les wilayas et les communes""",
     'category': 'Base',
     'author': 'Rabie Sakhri',
@@ -13,13 +13,10 @@
     'price': 5.0,
     'currency': 'USD',
 
-    'depends': ['base','contacts'],
-    'data': [
-	    'security/ir.model.access.csv',
-        'data/wilayas_data.xml',
-        'data/commune_data.xml',
-	    'views/res_commune.xml'
-    ],
+    'depends': ['base', 'contacts'],
+    'data': ['security/ir.model.access.csv', 'data/wilayas_data.xml', 'data/commune_data.xml',
+             'views/res_commune.xml'
+             ],
     'demo': [
 
     ],
@@ -29,4 +26,3 @@
     'application': True,
     'auto_install': False,
 }
-

@@ -11,6 +11,7 @@
                     <field name="name"/>
                     <field name="code"/>
                     <field name="state_id"/>
+                    <field name="name_ar"/>
                 </tree>
             </field>
         </record>

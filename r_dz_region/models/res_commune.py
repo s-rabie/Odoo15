@@ -6,12 +6,13 @@ from odoo.osv import expression
 class ResCommune(models.Model):
     _name = 'res.commune'
     _descritpion = 'Commune'
-    _order = 'name,id'
+    _order = 'state_id,code'
 
     code = fields.Char(string='Code Commune', size=2, help='Le code de la commune sur deux positions', required=True)
     state_id = fields.Many2one('res.country.state', string='Wilaya', required=True)
     wcode = fields.Char(related='state_id.code', readonly=1)
     name = fields.Char(string='Commune', size=64, required=True)
+    name_ar = fields.Char(string='Commune Ar', size=64, required=False)
 
     @api.model
     def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
