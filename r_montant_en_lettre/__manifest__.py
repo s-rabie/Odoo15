@@ -8,7 +8,7 @@
     'category': 'Sales',
     'website': '',
     'license': 'AGPL-3',
-    'price': 2.0,
+    'price': 0.0,
     'currency': 'USD',
     'depends': ['sale_management','purchase'],
     'data': [
