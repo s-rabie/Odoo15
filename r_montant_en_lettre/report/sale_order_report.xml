@@ -3,7 +3,7 @@
     <template id="sale_report_amount_in_words_inherit" inherit_id="sale.report_saleorder_document">
         <xpath expr="//div[@class='clearfix']" position="after">
                  <div style="padding-top:20px; padding-bottom:20px;">
-                    <p><span><strong>rrêter le présent devis à la somme de : </strong></span><span t-field="doc.amount_words"/></p>
+                    <p><span><strong>Arrêter le présent devis à la somme de : </strong></span><span t-field="doc.amount_words"/></p>
                 </div>
             </xpath>
     </template>
