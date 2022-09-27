@@ -18,7 +18,6 @@
              'views/res_commune.xml'
              ],
     'demo': [
-
     ],
     'images': ['static/description/odoo_r_banner.png'],
 

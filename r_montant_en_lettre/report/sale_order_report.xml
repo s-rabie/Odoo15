@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="sale_report_amount_in_words_inherit" inherit_id="sale.report_saleorder_document">
+
+        <span t-field="line.product_uom"/>
+
+        <!-- Masquer l'unité de mesure-->
+        <xpath expr="//span[@t-field='line.product_uom']" position="replace">
+        </xpath>
+
+        <!-- Afficher le montant en lettres-->
         <xpath expr="//div[@class='clearfix']" position="after">
-                 <div style="padding-top:20px; padding-bottom:20px;">
-                    <p><span><strong>Arrêter le présent devis à la somme de : </strong></span><span t-field="doc.amount_words"/></p>
-                </div>
-            </xpath>
+            <div style="padding-top:20px; padding-bottom:20px;">
+                <p>
+                    <span>
+                        <strong>Arrêter le présent devis à la somme de : </strong>
+                    </span>
+                    <span t-field="doc.amount_words"/>
+                </p>
+            </div>
+        </xpath>
     </template>
 </odoo>

@@ -12,7 +12,7 @@ class ResCommune(models.Model):
     state_id = fields.Many2one('res.country.state', string='Wilaya', required=True)
     wcode = fields.Char(related='state_id.code', readonly=1)
     name = fields.Char(string='Commune', size=64, required=True)
-    name_ar = fields.Char(string='Commune Ar', size=64, required=False)
+    name_ar = fields.Char(string='Nom arabe', size=64, required=False)
 
     @api.model
     def _name_search(self, name, args=None, operator='ilike', limit=100, name_get_uid=None):
