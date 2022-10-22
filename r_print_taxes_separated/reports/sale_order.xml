@@ -37,8 +37,8 @@
                             <td style="border: white; background-color: white">
                                 <h2 class="mt16">
                                     <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
-                                        <span t-if="doc.state not in ['draft','sent']">Commande #</span>
-                                        <span t-if="doc.state in ['draft','sent']">Devis #</span>
+                                        <span t-if="doc.state not in ['draft','sent']">Commande </span>
+                                        <span t-if="doc.state in ['draft','sent']">Proforma </span>
                                     </t>
                                     <t t-if="env.context.get('proforma', False) or is_pro_forma">
                                         <span>Pro-Forma Invoice #</span>

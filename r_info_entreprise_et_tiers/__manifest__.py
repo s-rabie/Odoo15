@@ -9,7 +9,6 @@
     'author': 'Rabie Sakhri',
     'website': "",
     'license': 'AGPL-3',
-
     'price': 0.0,
     'currency': 'USD',
 

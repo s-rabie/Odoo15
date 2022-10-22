@@ -59,5 +59,3 @@ class ResPartner(models.Model):
             self.commune_id = False
             res['domain']['commune_id'] = [('state_id', '=', self.state_id.id)]
         return res
-
-

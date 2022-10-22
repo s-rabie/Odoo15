@@ -63,9 +63,8 @@
                             <tr class="is-subtotal text-right">
                                 <td colspan="99">
                                     <strong class="mr16">Subtotal</strong>
-                                    <span
-                                            t-esc="current_subtotal"
-                                            t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                    <span t-esc="current_subtotal"
+                                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'
                                     />
                                 </td>
                             </tr>
@@ -74,50 +73,49 @@
                 </tbody>
             </xpath>
             <xpath expr="//div[@class='page']/div[2]/div[1]/div[1]/table[@class='table table-sm']" position="replace">
-                <div class="col-12" style="float:right;">
-
-                    <table style="width:100%;float:right;margin-right:-10px;">
+                <div>
+                    <table style="width:100%;float:right;">
                         <tr>
-                            <td>
-                                <strong style="color:black;">TOTAL H.T.</strong>
+                            <td style="color: #AF041F">
+                                <strong>TOTAL H.T.</strong>
                             </td>
                             <td style="text-align:right;text-left:center;justify-content:end;">
                                 <span t-esc="o.amount_untaxed"
-                                      t-options='{"widget": "float", "precision": 2}'/>
+                                      t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                 <span t-esc="currency_id"/>
                             </td>
                         </tr>
-
                         <t t-foreach="taxes_ids" t-as="tax">
                             <tr>
                                 <td>
-                                    <strong style="color:black;">T.V.A.<span t-esc="tax"
-                                                                             t-options='{"widget": "float", "precision": 0}'/>%
+                                    <strong style="color:black;">T.V.A.<span t-esc="tax"/>%
                                     </strong>
                                 </td>
-                                <td style="text-align:right;">
+                                <td class="text-right o_price_total"
+                                    style="text-align:right;color:black;text-left:center;justify-content:end;">
                                     <t t-set="current_tax" t-value="0"/>
                                     <t t-foreach="o.invoice_line_ids" t-as="invoices">
                                         <t t-foreach="invoices.tax_ids" t-as="t">
                                             <t t-if="t.amount == tax">
                                                 <t t-set="current_tax"
                                                    t-value="current_tax + ( invoices.price_subtotal*tax)/100"/>
-                                                <span t-esc="current_tax"
-                                                      t-options='{"widget": "float", "precision": 2}'/>
-                                                <span t-esc="currency_id"/>
                                             </t>
                                         </t>
                                     </t>
+                                    <span t-esc="current_tax"
+                                          t-options='{"widget": "monetary", "display_currency": o.currency_id}'
+                                    style="color:black;"/>
+                                    <span t-esc="currency_id"/>
                                 </td>
                             </tr>
                         </t>
-                        <tr>
-                            <td>
-                                <strong style="color:black;">TOTAL T.T.C.</strong>
+                        <tr style="background-color:#B61B2A;">
+                            <td style="background-color:#B61B2A;">
+                                <strong style="color:white">TOTAL T.T.C.</strong>
                             </td>
-                            <td style="text-align:right;">
+                            <td style="background-color:#B61B2A; color:white;text-align:right;">
                                 <span t-esc="o.amount_total"
-                                      t-options='{"widget": "float", "precision": 2}'/>
+                                      t-options='{"widget": "monetary", "display_currency": o.currency_id}'/>
                                 <span t-esc="currency_id"/>
                             </td>
                         </tr>

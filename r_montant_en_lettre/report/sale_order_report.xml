@@ -2,6 +2,42 @@
 <odoo>
     <template id="sale_report_amount_in_words_inherit" inherit_id="sale.report_saleorder_document">
 
+        <xpath expr="//h2[@class='mt16']" position="replace">
+            <div>
+                <table style="width:100%; border: white">
+                    <tr style="border: white">
+                        <td style="border: white">
+                            <h2 class="mt16">
+                                <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
+                                    <span t-if="doc.state not in ['draft','sent']">COMMANDE </span>
+                                    <span t-if="doc.state in ['draft','sent']">PROFORMA </span>
+                                </t>
+                                <t t-if="env.context.get('proforma', False) or is_pro_forma">
+                                    <span>Pro-Forma Invoice # </span>
+                                </t>
+                                <span t-field="doc.name"/>
+                            </h2>
+                        </td>
+                        <td style="border: white">
+                            <div class="col-auto col-3 mw-100 mb-2">
+                                <strong>Alger le : <span class="m-0" t-field="doc.date_order"/></strong>
+                            </div>
+                            <div t-if="doc.user_id.name" class="col-auto col-2 mw-100 mb-2">
+                                <strong>Commercial(e) : <span class="m-0" t-field="doc.user_id"/></strong>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+
+
+        </xpath>
+
+        <xpath expr="//div[@class='row mt32 mb32']" position="replace">
+
+        </xpath>
+
         <span t-field="line.product_uom"/>
 
         <!-- Masquer l'unité de mesure-->
@@ -12,10 +48,14 @@
         <xpath expr="//div[@class='clearfix']" position="after">
             <div style="padding-top:20px; padding-bottom:20px;">
                 <p>
-                    <span>
-                        <strong>Arrêter le présent devis à la somme de : </strong>
-                    </span>
-                    <span t-field="doc.amount_words"/>
+                    <h6>
+                        <strong>Arrêter la présente Proforma à la somme de : <span t-field="doc.amount_words"/></strong>
+                    </h6>
+                </p>
+                <p>
+                    <h5>
+                        <strong>Pour toute réservation un bon de commande est imperatif ainsi qu'un acompte de 30%</strong>
+                    </h5>
                 </p>
             </div>
         </xpath>

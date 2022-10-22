@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 {
-    'name': """Algérie - 58 Wilayas""",
+    'name': """Algérie - 58 Wilayas | Algerian regions""",
     'version': '1.0.0.1',
     'summary': """Les 58 wilayas et leurs communes""",
     'description': """Les wilayas et les communes""",
@@ -9,8 +9,7 @@
     'author': 'Rabie Sakhri',
     'website': '',
     'license': 'AGPL-3',
-
-    'price': 0.0,
+    'price': 5.0,
     'currency': 'USD',
 
     'depends': ['base', 'contacts'],

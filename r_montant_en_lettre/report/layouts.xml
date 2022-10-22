@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <odoo>
+        <data>
+<!--            TO change header and footer of reports-->
+            <template id="external_layout_header_inherit" inherit_id="web.external_layout_standard">
+                <xpath expr="//div[1]" position="replace">
+                    <div class="header">
+                        <div style="position:absolute; top:0x; left:0px; ">
+                            <img src='/hr_base/static/src/img/entete.jpg'/>
+                    </div>
+                    </div>
+                </xpath>
+            </template>
+
+            <template id="external_layout_footer_inherit" inherit_id="web.external_layout_standard">
+                <xpath expr="//div[3]" position="replace">
+                    <div class="footer o_standard_footer">
+<!--                        <div t-if="report_type == 'pdf'" class="text-muted" style="text-align:right;">Page: <span class="page"/>/<span class="topage" style=" font-weight:12px;"/></div>-->
+                    </div>
+                </xpath>
+            </template>
+        </data>
+    </odoo>
