@@ -1,2 +1,2 @@
-# Odoo15
-Odoo 15
+# Odoo16
+Odoo 16
