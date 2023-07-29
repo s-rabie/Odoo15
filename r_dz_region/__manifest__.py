@@ -6,7 +6,7 @@
     'summary': """Les 58 wilayas et leurs communes""",
     'description': """Les wilayas et les communes""",
     'category': 'Base',
-    'author': 'Rabie Sakhri',
+    'author': 'Tech Wise Advisors',
     'website': '',
     'license': 'AGPL-3',
     'price': 5.0,
