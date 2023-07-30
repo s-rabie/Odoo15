@@ -11,15 +11,13 @@
     'license': 'AGPL-3',
     'price': 5.0,
     'currency': 'USD',
-
+    'images': ['static/description/odoo_r_banner.png'],
     'depends': ['base', 'contacts'],
     'data': ['security/ir.model.access.csv', 'data/wilayas_data.xml', 'data/commune_data.xml',
              'views/res_commune.xml'
              ],
     'demo': [
-    ],
-    'images': ['static/description/odoo_r_banner.png'],
-
+    ],    
     'installable': True,
     'application': True,
     'auto_install': False,

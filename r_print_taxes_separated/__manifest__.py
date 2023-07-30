@@ -2,24 +2,22 @@
 
 {
     'name': 'Eclater la taxe en plusieurs lignes dans les Devis et les Factures',
-    'version': '15.0e',
-    'author': 'L team & revu par Rabie Sakhri',
-    'category': 'Sales',
-    'website': '',
-    'license': 'AGPL-3',
-    'price': 0.0,
-    'currency': 'USD',
-    'sequence': 1,
-    'website': '',
-    'summary': '',
+    'version': '1.0.0.1',
+    'summary': 'séparer les différentes taxes sur la facture',
     'description': """
 Dans le cas où l'entreprise utilise plus d'une taxe TVA, ce module affiche les deux taxes dans
 le devis et la facture
     """,
+    'category': 'Sales',
+    'author': 'Tech Wise Advisors',
+    'website': 'https://techwise-dz.com',
+    'license': 'OPL-1',
+    'price': 10.0,
+    'currency': 'USD',
+    'sequence': 1,
     'images': ['static/description/odoo_r_banner.png', ],
     'depends': ['base', 'sale', 'account'],
     'web.assets_backend': [
-    
     ],
     'data': [
         'reports/report_menu.xml',
