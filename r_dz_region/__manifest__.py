@@ -7,7 +7,7 @@
     'description': """Les wilayas et les communes""",
     'category': 'Base',
     'author': 'Tech Wise Advisors',
-    'website': '',
+    'website': 'https://techwise-dz.com',
     'license': 'AGPL-3',
     'price': 5.0,
     'currency': 'USD',

@@ -7,7 +7,7 @@
     'description': """Ajouter le RC, NIF, NIS & AI dans les formes des tiers/Entreprise""",
     'category': 'Base',
     'author': 'Tech Wise Advisors',
-    'website': "",
+    'website': 'https://techwise-dz.com',
     'license': 'AGPL-3',
     'price': 0.0,
     'currency': 'USD',
