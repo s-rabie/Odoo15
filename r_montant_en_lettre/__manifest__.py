@@ -2,11 +2,11 @@
 {
     'name': 'Afficher le montant en lettre au niveau des les devis, les factures et les bons de commande achat ',
     'version': '15.0.0.0',
-    'author': 'Rabie Sakhri',
     'summary': 'Afficher le montant en lettre dans les devis, les factures et les bons de commande achat, à la fois dans les formulaires et les rapports',
     'description': """Ce module affiche le montant total en lettre dans les devis, les factures et les bons de commande, à la fois dans les formulaires et les rapports.""",
     'category': 'Sales',
-    'website': '',
+    'author': 'Tech Wise Advisors',
+    'website': 'https://techwise-dz.com',
     'license': 'AGPL-3',
     'price': 0.0,
     'currency': 'USD',
