@@ -6,7 +6,7 @@
     'summary': """Ajouter le RC, NIF, NIS & AI dans les formes des tiers/Entreprise""",
     'description': """Ajouter le RC, NIF, NIS & AI dans les formes des tiers/Entreprise""",
     'category': 'Base',
-    'author': 'Rabie Sakhri',
+    'author': 'Tech Wise Advisors',
     'website': "",
     'license': 'AGPL-3',
     'price': 0.0,
